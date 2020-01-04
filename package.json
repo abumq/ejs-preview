@@ -4,8 +4,11 @@
   "description": "Preview EJS template by providing JSON data",
   "main": "index.js",
   "bin": {
-    "ejspreview": "node ./index.js"
+    "ejs-preview": "node ./index.js"
   },
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "start": "node ./index.js"
   },
