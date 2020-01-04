@@ -1,0 +1,21 @@
+{
+  "name": "ejs-preview",
+  "version": "1.0.0",
+  "description": "Preview EJS template by providing JSON data",
+  "main": "index.js",
+  "bin": {
+    "ejspreview": "node ./index.js"
+  },
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "minimist": "^1.2.0"
+  },
+  "repository": "https://github.com/amrayn/ejs-preview",
+  "author": "Amrayn Web Services <opensource@amrayn.com>",
+  "license": "MIT"
+}
