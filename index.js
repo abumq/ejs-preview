@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /**
  * Bismillah ar-Rahmaan ar-Raheem
  *
@@ -37,7 +39,7 @@ if (!fs.existsSync(pathResolve(templateRoot))) {
 
 const previewBaseData = args.common;
 if (!previewBaseData) {
-  console.warn(chalk.yellow('WARNING: Preview base data not specified (--base) - you will need to specify it with each request'));
+  console.warn(chalk.yellow('WARNING: Preview base data not specified (--common) - you will need to specify it with each request'));
 }
 
 const app = express();
@@ -49,7 +51,7 @@ const cleanRequire = f => {
 }
 
 app.get('/', (req, res) => {
-  const baseDataFile = fs.existsSync(`${templateRoot}/${req.query.base}.js`) ? `${templateRoot}/${req.query.base}.js`
+  const baseDataFile = fs.existsSync(`${templateRoot}/${req.query.common}.js`) ? `${templateRoot}/${req.query.common}.js`
     : previewBaseData;
 
   console.debug('Base data file %s', baseDataFile);

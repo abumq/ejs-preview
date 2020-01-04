@@ -24,7 +24,7 @@ module.exports = {
   activationLink: '/link',
 };
 ```
-* `base` If you want to override `base` args provided at the startup
+* `common` If you want to override `common` args provided at the startup
 * `plain` If specified `plain/text` content-type is sent
 
 You can change the port with `PORT` environment variable
