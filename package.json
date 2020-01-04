@@ -1,6 +1,6 @@
 {
   "name": "ejs-preview",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Preview EJS template by providing JSON data",
   "main": "index.js",
   "bin": {
