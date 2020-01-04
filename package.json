@@ -4,7 +4,7 @@
   "description": "Preview EJS template by providing JSON data",
   "main": "index.js",
   "bin": {
-    "ejs-preview": "node ./index.js"
+    "ejs-preview": "./index.js"
   },
   "files": [
     "index.js"
