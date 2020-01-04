@@ -40,6 +40,8 @@ if (!fs.existsSync(pathResolve(templateRoot))) {
 const previewBaseData = args.common;
 if (!previewBaseData) {
   console.warn(chalk.yellow('WARNING: Preview base data not specified (--common) - you will need to specify it with each request'));
+} else if (!fs.existsSync(pathResolve(`${templateRoot}/${previewBaseData}`))) {
+  console.error(chalk.red('Common data file [%s] does not exist'), pathResolve(`${templateRoot}/${previewBaseData}`)));
 }
 
 const app = express();
@@ -52,7 +54,7 @@ const cleanRequire = f => {
 
 app.get('/', (req, res) => {
   const baseDataFile = fs.existsSync(`${templateRoot}/${req.query.common}.js`) ? `${templateRoot}/${req.query.common}.js`
-    : previewBaseData;
+    : pathResolve(`${templateRoot}/${previewBaseData}`));
 
   console.debug('Base data file %s', baseDataFile);
 
